@@ -1,4 +1,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 
     body {
         margin: 0;
@@ -8,10 +10,12 @@
     div#background {
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); /*#F21326, #F26D78, #80B2F2, #79D0F2, #F2CD5C, #F28972*/
+        background: linear-gradient(-45deg, black, #253C59, #537FA6); /*#F21326, #F26D78, #80B2F2, #79D0F2, #F2CD5C, #F28972*/
         animation: fundo 5s ease-in-out infinite;
         background-size: 400% 400%;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     @keyframes fundo {  
@@ -27,30 +31,76 @@
     }
 
     main {
-        position: relative;
-        top: 10%;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
+        background-color: #1f2b3a;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px 0;
     }
 
     main > h1 {
-        font-family: 'Patrick Hand';
+        /*font-family: 'Patrick Hand';*/
+        /*font-family: 'Open Sans Condensed';*/
+        font-family: 'Merienda';
         font-weight: 400;
-        font-size: 3em;
+        font-size: 34px;
         color: white;
         margin: 0;
-        text-align: center;
         letter-spacing: 5px;
+        text-align: center;
+        position: relative;
     }
 
     main > hr {
-        width: 20%;
-        border: solid white 1px;
-        border-radius: 20px;
-        height: 0.2em;
-        background-color: white;
-        margin: 0;
+        width: 200px;
         position: relative;
-        left: 40%;
+        border: white solid 1px;
+        border-radius: 20px;
+    }
+
+    main > hr#inteiro {
+        width: auto;
+    }
+
+    .início {
+        right: 55px;
+    }
+
+    .fim {
+        left: 55px;
+    }
+
+    #fim > hr {
+        width: 140px;
+    }
+
+    main> div > img {
+        width: 80%;
+        margin: 20px 20px;
+        border-radius: 50%;
+    }
+
+    div#imagem {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .centro {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px){
+        main > h1{
+            font-size: 42px;
+        }
+
+        main > hr {
+            border-width: 2px;
+        }
+
+        main > img {
+            width: 500px;
+        }    
+
     }
