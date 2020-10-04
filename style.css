@@ -5,17 +5,18 @@
     body {
         margin: 0;
         padding: 0;
+        color:#D9D9D9; /*#418EF0*/
+        font-family: 'Open Sans Condensed';
     }
 
     div#background {
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(-45deg, black, #253C59, #537FA6); /*#F21326, #F26D78, #80B2F2, #79D0F2, #F2CD5C, #F28972*/
-        animation: fundo 5s ease-in-out infinite;
-        background-size: 400% 400%;
+        background-image: url(pexels-sebastian-voortman-189349.jpg);
+        background-size: cover;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center;    
     }
 
     @keyframes fundo {  
@@ -30,59 +31,73 @@
         }
     }
 
+    div#background > div.borda {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 340px;
+        height: 520px;
+        border-radius: 10px;
+        /*background: linear-gradient(-45deg, #f01e30, #f07983, #679ce2, #62c8f0, #ecc44b, #d3674f);*/
+        background: linear-gradient(-45deg, #484442, #FDE7B5, #FD9D55, #484442);
+        animation: fundo 5s ease-in-out infinite;
+        background-size: 400% 400%;
+    }
+
     main {
-        background-color: #1f2b3a;
-        border-radius: 20px;
-        padding: 20px;
-        margin: 20px 0;
+        background-color: #1369eb; /*rgba(245, 222, 179, 0.685)*/
+        border-radius: 10px;
+        margin: 10px;
+        display: flex;
+        flex-flow: column;
+        width: 320px;
+        height: 500px;
     }
 
     main > h1 {
         /*font-family: 'Patrick Hand';*/
         /*font-family: 'Open Sans Condensed';*/
-        font-family: 'Merienda';
-        font-weight: 400;
-        font-size: 34px;
-        color: white;
-        margin: 0;
-        letter-spacing: 5px;
+        font-weight: 700;
+        font-size: 32px;
+        margin: 10px 30px 5px 30px;
+        letter-spacing: 6px;
         text-align: center;
-        position: relative;
     }
 
-    main > hr {
-        width: 200px;
-        position: relative;
-        border: white solid 1px;
-        border-radius: 20px;
+    span#profissão {
+        text-align: center;
+        font-size: 28px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
     }
 
-    main > hr#inteiro {
-        width: auto;
+    div#línguas {
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        margin: 0 40px;
+        font-weight: 700;
     }
 
-    .início {
-        right: 55px;
-    }
-
-    .fim {
-        left: 55px;
-    }
-
-    #fim > hr {
-        width: 140px;
-    }
-
-    main> div > img {
-        width: 80%;
-        margin: 20px 20px;
+    img {
+        width: 150px;
+        padding: 5px;
         border-radius: 50%;
     }
 
-    div#imagem {
+    main > div#content {
         display: flex;
         justify-content: center;
-        margin-top: 30px;
+        margin-top: 20px;
+    }
+
+    main > div > span.borda {
+        width: 150px;
+        display: flex;
+        border-radius: 50%;
+        background: linear-gradient(-45deg,  #484442, #FDE7B5, #FD9D55, #484442);
+        animation: fundo 5s ease-in-out infinite;
+        background-size: 400% 400%;
     }
 
     .centro {
@@ -90,17 +105,67 @@
         justify-content: center;
     }
 
+    .bordaspan {
+        border: solid #D9D9D9 1px;
+        border-radius: 10px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+    }
+
+    a#contact {
+        font-size: 28px;
+        text-decoration: none;
+        color: #D9D9D9;
+        margin: 25px 20px 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2px;
+        height: 40px;
+        border: solid #D9D9D9 2px;
+    }
+
+    a#contact:hover {
+        background-color: #D9D9D9;
+        color: #1369eb;
+        border: solid #1369eb 2px;
+    }
+
+    div#contatos {
+        margin: 25px 20px 0 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    div#contatos > a {
+        color: #D9D9D9;
+        margin: 0 15px;
+    }
+
+    div#contatos > a > i#twitter:hover {
+        color: #1369eb;
+    }
+
     @media (min-width: 768px){
         main > h1{
-            font-size: 42px;
+            font-size: 54px;
+            margin: 0 140px;
         }
 
-        main > hr {
-            border-width: 2px;
+        main {
+            width: 400px;
+            height: 500px;
         }
 
         main > img {
             width: 500px;
-        }    
+        }   
+        
+        main > div#content {
+            left: 100px;
+        }
 
     }
