@@ -1,11 +1,9 @@
-    @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 
     body {
         margin: 0;
         padding: 0;
-        color:#D9D9D9; /*#418EF0*/
+        color:#D9D9D9;
         font-family: 'Open Sans Condensed';
     }
 
@@ -38,14 +36,13 @@
         width: 340px;
         height: 520px;
         border-radius: 10px;
-        /*background: linear-gradient(-45deg, #f01e30, #f07983, #679ce2, #62c8f0, #ecc44b, #d3674f);*/
-        background: linear-gradient(-45deg, #484442, #FDE7B5, #FD9D55, #484442);
+        background: linear-gradient(-45deg, #484442e1, #FDE7B5e1, #FD9D55e1, #484442e1  );
         animation: fundo 5s ease-in-out infinite;
         background-size: 400% 400%;
     }
 
     main {
-        background-color: #1369eb; /*rgba(245, 222, 179, 0.685)*/
+        background-color: #0a4296ea;
         border-radius: 10px;
         margin: 10px;
         display: flex;
@@ -55,8 +52,6 @@
     }
 
     main > h1 {
-        /*font-family: 'Patrick Hand';*/
-        /*font-family: 'Open Sans Condensed';*/
         font-weight: 700;
         font-size: 32px;
         margin: 10px 30px 5px 30px;
@@ -80,9 +75,7 @@
     }
 
     img {
-        width: 150px;
-        padding: 5px;
-        border-radius: 50%;
+        border-radius: 100px;
     }
 
     main > div#content {
@@ -92,7 +85,8 @@
     }
 
     main > div > span.borda {
-        width: 150px;
+        padding: 5px;
+        justify-content: center;
         display: flex;
         border-radius: 50%;
         background: linear-gradient(-45deg,  #484442, #FDE7B5, #FD9D55, #484442);
@@ -128,8 +122,8 @@
 
     a#contact:hover {
         background-color: #D9D9D9;
-        color: #1369eb;
-        border: solid #1369eb 2px;
+        color: #0a4296;
+        border: solid #0a4296 2px;
     }
 
     div#contatos {
@@ -145,27 +139,61 @@
         margin: 0 15px;
     }
 
-    div#contatos > a > i#twitter:hover {
-        color: #1369eb;
+    i#twitter:hover {
+        color: #1DA1F2;
+    }
+
+    i#facebook:hover {
+        color: #4267B2;
+    }
+
+    i#instagram:hover {
+        color: #C13584;
+    }
+
+    i#github:hover {
+        color: white;
     }
 
     @media (min-width: 768px){
+        div#background > div.borda {
+            width: 420px;
+            height: 640px;
+        }
+
         main > h1{
-            font-size: 54px;
-            margin: 0 140px;
+            font-size: 48px;
         }
 
         main {
             width: 400px;
-            height: 500px;
+            height: 620px;
         }
-
-        main > img {
-            width: 500px;
-        }   
         
         main > div#content {
             left: 100px;
         }
 
+        main > div > span.borda {
+            width: 200px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        span#profissão {
+            font-size: 36px;
+        }
+
+        div#línguas {
+            font-size: 28px;
+        }
+
+        a#contact {
+            font-size: 32px;
+            height: 40px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
     }
